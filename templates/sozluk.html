@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelime Arama</title>
+</head>
+<body>
+    <h1>KelimeArama Uygulaması</h1>
+    <h1>(Tatlılar Hakkında Temel Bilgiler)</h1>
+    <form action="/arama" method="get">
+        <label for="kelime">Aranacak kelime:</label>
+        <input type="text" id="kelime" name="kelime">
+        <button type="submit">Ara</button>
+    </form>
+    {% if result %}
+        <h2>Sonuç:</h2>
+        <p>{{ result }}</p>
+    {% elif error %}
+        <h2>Hata:</h2>
+        <p>{{ error }}</p>
+    {% endif %}
+</body>
+</html>
